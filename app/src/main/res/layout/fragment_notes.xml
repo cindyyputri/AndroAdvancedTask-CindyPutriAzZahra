@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.NotesFragment"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:id="@+id/containerNotes">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="80dp"
+        tools:listitem="@layout/item_notes" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:fabSize="normal"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="85dp"
+        android:layout_marginRight="14dp"
+        android:id="@+id/fab_add"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Data Kosong"
+        android:gravity="center"
+        android:id="@+id/tv_empty"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:visibility="gone"/>
+
+</FrameLayout>
